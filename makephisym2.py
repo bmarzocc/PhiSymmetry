@@ -99,7 +99,7 @@ if group=='':
 print "Querying DBS ..."
 
 #query='dbs search --url=\"http://cmsdbsprod.cern.ch/cms_dbs_prod_global/servlet/DBSServlet\" --query=\"find file where dataset = '+dataset+' and run ='+repr(firstrun)+'\"'
-query = 'das_client.py --query=\"file dataset='+dataset+'   run ='+repr(firstrun)+'\"'
+query = '$PWD/das_client.py --query=\"file dataset='+dataset+'   run ='+repr(firstrun)+'\"'
 
 
 queryp=subprocess.Popen(query,stdout=subprocess.PIPE,shell=True)
